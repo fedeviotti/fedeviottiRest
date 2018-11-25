@@ -4,6 +4,7 @@ import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 
 import com.aws.codestar.projecttemplates.GatewayResponse;
+
 import org.json.JSONObject;
 
 import java.util.HashMap;
@@ -17,6 +18,15 @@ public class HelloWorldHandler implements RequestHandler<Object, Object> {
     public Object handleRequest(final Object input, final Context context) {
         Map<String, String> headers = new HashMap<>();
         headers.put("Content-Type", "application/json");
-        return new GatewayResponse(new JSONObject().put("Output", "Hello World!!").toString(), headers, 200);
+        
+        JSONObject payload = new JSONObject();
+        JSONObject user = new JSONObject();
+        user.put("id", "1");
+        user.put("name", "Federico Viotti");
+        user.put("username", "fedeviotti");
+        user.put("email", "fedeviotti@gmail.com");
+        payload.put("User", user);
+        
+        return new GatewayResponse(payload.toString(), headers, 200);
     }
 }
