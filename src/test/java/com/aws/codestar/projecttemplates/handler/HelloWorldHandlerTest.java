@@ -22,9 +22,9 @@ public class HelloWorldHandlerTest {
 
     private static final String EXPECTED_CONTENT_TYPE = "application/json";
     private static final String EXPECTED_RESPONSE_VALUE_ID = "1";
-    private static final String EXPECTED_RESPONSE_VALUE_NAME = "Federico Viotti";
-    private static final String EXPECTED_RESPONSE_VALUE_USERNAME = "fedeviotti";
-    private static final String EXPECTED_RESPONSE_VALUE_EMAIL = "fedeviotti@gmail.com";
+    private static final String EXPECTED_RESPONSE_VALUE_NAME = "Federico Test";
+    private static final String EXPECTED_RESPONSE_VALUE_USERNAME = "fedetest";
+    private static final String EXPECTED_RESPONSE_VALUE_EMAIL = "federico@test.com";
     private static final int EXPECTED_STATUS_CODE_SUCCESS = 200;
 
     // A mock class for com.amazonaws.services.lambda.runtime.Context

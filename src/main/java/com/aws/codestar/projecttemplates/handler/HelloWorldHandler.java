@@ -22,9 +22,9 @@ public class HelloWorldHandler implements RequestHandler<Object, Object> {
         JSONObject payload = new JSONObject();
         JSONObject user = new JSONObject();
         user.put("id", "1");
-        user.put("name", "Federico Viotti");
-        user.put("username", "fedeviotti");
-        user.put("email", "fedeviotti@gmail.com");
+        user.put("name", "Federico Test");
+        user.put("username", "fedetest");
+        user.put("email", "federico@test.com");
         payload.put("User", user);
         
         return new GatewayResponse(payload.toString(), headers, 200);
